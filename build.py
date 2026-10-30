@@ -78,8 +78,9 @@ TERMENI = [
         "Farfuria îți propune prânzurile și cinele pentru o săptămână, după bugetul, caloriile, gusturile și aparatele tale, cu rețete pas cu pas și lista de cumpărături.",
         "Costurile afișate sunt estimări orientative, calculate din prețuri medii de referință. Prețurile reale din magazine pot fi mai mici sau mai mari.",
     ]),
-    ("Abonament", [
-        "Unele funcții pot fi oferite printr-un abonament opțional. Prețul și eventuala perioadă de probă sunt afișate în Google Play, în moneda ta, înainte să te abonezi. Abonamentul se reînnoiește automat până îl anulezi.",
+    ("Versiunea gratuită și Premium", [
+        "Farfuria este gratuită: planul pe 7 zile (cu o regenerare pe săptămână), toate rețetele, modul de gătit, lista de cumpărături și contul cu sincronizare. Farfuria Premium este un abonament opțional care adaugă regenerări și alternative nelimitate pentru mese, nutriția avansată (high protein, proteine și carbohidrați pe zi, calculatorul de necesar) și rețetele favorite.",
+        "Fiecare cont nou primește Premium gratuit în primele 30 de zile. Nu ai nevoie de card și nu se plătește nimic; după aceea aplicația continuă ca versiune gratuită. Prețul abonamentului și eventuala perioadă de probă sunt afișate în Google Play, în moneda ta, înainte să te abonezi. Abonamentul se reînnoiește automat până îl anulezi.",
         "Plățile, reînnoirile și rambursările sunt gestionate de Google Play. Ca să eviți următoarea plată, anulează cu cel puțin 24 de ore înainte de sfârșitul perioadei: Google Play → Plăți și abonamente → Abonamente.",
     ]),
     ("Sănătate", ["Valorile nutriționale sunt calculate din ingrediente și sunt orientative. Farfuria nu oferă sfaturi medicale. Dacă ai o afecțiune, alergii sau un regim recomandat de medic, verifică rețetele și ingredientele înainte să le gătești."]),
@@ -121,7 +122,7 @@ pagina(
   <div class="card"><b>Lista de cumpărături</b><span>Cantitățile adunate pe raioane, cu ce ai deja acasă scos din listă.</span></div>
   <div class="card"><b>Gătești mai rar</b><span>Alegi de câte ori gătești pe săptămână; porțiile se calculează singure.</span></div>
 </div>
-<p class="muted">Datele tale se salvează în cont și se sincronizează între telefoane.</p>
+<p class="muted">Farfuria e gratuită. Conturile noi primesc o lună de Premium gratuit: regenerări nelimitate, nutriție avansată și favorite.</p>
 <p class="muted">Întrebări? Scrie-ne la <a href="mailto:""" + CONTACT + """">""" + CONTACT + """</a>.</p>""",
     "Farfuria îți face planul de prânzuri și cine pe o săptămână, după buget, calorii și aparatele tale.",
 )
