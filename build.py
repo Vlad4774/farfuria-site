@@ -1,4 +1,4 @@
-"""Generează paginile site-ului Farfuria (python build.py). Textele legale trebuie ținute la fel ca în aplicație."""
+"""Generează paginile site-ului Plate (python build.py). Textele legale trebuie ținute la fel ca în aplicație."""
 
 import html
 import pathlib
@@ -48,11 +48,11 @@ def pagina(fisier, titlu, corp, descriere):
 <body>
 <div class="wrap">
 <header>
-  <a class="brand" href="./"><img src="logo.png" alt="">FARFURIA</a>
+  <a class="brand" href="./"><img src="logo.png" alt="">PLATE</a>
   <nav><a href="confidentialitate.html">Confidențialitate</a><a href="termeni.html">Termeni</a><a href="stergere-cont.html">Ștergerea contului</a></nav>
 </header>
 {corp}
-<footer><span>© 2026 Farfuria</span><a href="confidentialitate.html">Politica de confidențialitate</a><a href="termeni.html">Termeni și condiții</a><a href="stergere-cont.html">Ștergerea contului</a><a href="mailto:{CONTACT}">{CONTACT}</a></footer>
+<footer><span>© 2026 Plate</span><a href="confidentialitate.html">Politica de confidențialitate</a><a href="termeni.html">Termeni și condiții</a><a href="stergere-cont.html">Ștergerea contului</a><a href="mailto:{CONTACT}">{CONTACT}</a></footer>
 </div>
 </body>
 </html>
@@ -69,23 +69,23 @@ def sectiuni(items):
 
 
 TERMENI = [
-    ("Cine suntem", [f"Farfuria este o aplicație de planificare a meselor, făcută de un dezvoltator independent din România. Contact: {CONTACT}."]),
+    ("Cine suntem", [f"Plate este o aplicație de planificare a meselor, făcută de un dezvoltator independent din România. Contact: {CONTACT}."]),
     ("Contul tău", [
-        "Ai nevoie de un cont ca să folosești Farfuria. Îl poți crea cu adresa de email și o parolă (confirmată cu un cod trimis pe email) sau cu contul Google. Păstrează-ți parola doar pentru tine; ești responsabil pentru ce se întâmplă în contul tău.",
-        "Poți șterge contul oricând, din aplicație: Setări → contul meu → șterge contul.",
+        "Ai nevoie de un cont ca să folosești Plate. Îl poți crea cu adresa de email și o parolă (confirmată cu un cod trimis pe email) sau cu contul Google. Păstrează-ți parola doar pentru tine; ești responsabil pentru ce se întâmplă în contul tău.",
+        "Poți șterge contul oricând, din aplicație: Setări → Șterge contul.",
     ]),
     ("Ce oferă aplicația", [
-        "Farfuria îți propune mesele pentru o săptămână (mic dejun, prânz, cină și gustări, cum alegi tu), după bugetul, caloriile, gusturile și aparatele tale, cu rețete pas cu pas și lista de cumpărături.",
+        "Plate îți propune mesele pentru o săptămână (mic dejun, prânz, cină și gustări, cum alegi tu), după bugetul, caloriile, gusturile și aparatele tale, cu rețete pas cu pas și lista de cumpărături.",
         "Costurile afișate sunt estimări orientative, calculate din prețuri medii de referință. Prețurile reale din magazine pot fi mai mici sau mai mari.",
     ]),
     ("Versiunea gratuită și Premium", [
-        "Farfuria este gratuită: planul pe 7 zile (cu o regenerare pe săptămână), toate rețetele, modul de gătit, lista de cumpărături și contul cu sincronizare. Versiunea gratuită afișează reclame. Farfuria Premium este un abonament opțional, fără reclame, care adaugă regenerări și alternative nelimitate pentru mese, nutriția avansată (high protein, proteine și carbohidrați pe zi, calculatorul de necesar) și rețetele favorite.",
+        "Plate este gratuit: planul pe 7 zile (cu o regenerare pe săptămână), toate rețetele, modul de gătit, lista de cumpărături și contul cu sincronizare. Versiunea gratuită afișează reclame. Plate Premium este un abonament opțional, fără reclame, care adaugă regenerări și alternative nelimitate pentru mese, nutriția avansată (high protein, proteine și carbohidrați pe zi, calculatorul de necesar) și rețetele favorite.",
         "Fiecare cont nou primește Premium gratuit în primele 30 de zile. Nu ai nevoie de card și nu se plătește nimic; după aceea aplicația continuă ca versiune gratuită. Prețul abonamentului și eventuala perioadă de probă sunt afișate în Google Play, în moneda ta, înainte să te abonezi. Abonamentul se reînnoiește automat până îl anulezi.",
         "Plățile, reînnoirile și rambursările sunt gestionate de Google Play. Ca să eviți următoarea plată, anulează cu cel puțin 24 de ore înainte de sfârșitul perioadei: Google Play → Plăți și abonamente → Abonamente.",
     ]),
-    ("Sănătate", ["Valorile nutriționale sunt calculate din ingrediente și sunt orientative. Farfuria nu oferă sfaturi medicale. Dacă ai o afecțiune, alergii sau un regim recomandat de medic, verifică rețetele și ingredientele înainte să le gătești."]),
+    ("Sănătate", ["Valorile nutriționale sunt calculate din ingrediente și sunt orientative. Plate nu oferă sfaturi medicale. Dacă ai o afecțiune, alergii sau un regim recomandat de medic, verifică rețetele și ingredientele înainte să le gătești."]),
     ("Utilizare corectă", ["Nu folosi serviciul abuziv: fără încercări de a accesa datele altor persoane, de a supraîncărca serverele sau de a ocoli abonamentul."]),
-    ("Răspundere", ["Aplicația este oferită „ca atare”. În limitele permise de lege, nu răspundem pentru pierderi de date sau pentru rezultatele rețetelor. Datele tale sunt salvate în cont; poți descărca oricând o copie (Setări → backup și import → exportă datele)."]),
+    ("Răspundere", ["Aplicația este oferită „ca atare”. În limitele permise de lege, nu răspundem pentru pierderi de date sau pentru rezultatele rețetelor. Datele tale sunt salvate în cont; poți descărca oricând o copie a datelor personale (Setări → Exportă datele)."]),
     ("Modificări", ["Putem actualiza acești termeni. Modificările importante vor fi anunțate în aplicație."]),
 ]
 
@@ -109,58 +109,58 @@ CONFIDENTIALITATE = [
     ]),
     ("Permisiuni pe telefon", ["Internet (sincronizarea și reclamele), vibrații (timerul din modul de gătit) și identificatorul de publicitate (reclamele din versiunea gratuită; îl poți reseta sau șterge din setările telefonului). Aplicația nu cere acces la locație, cameră, microfon sau contacte."]),
     ("Drepturile tale (GDPR)", [
-        "Poți vedea și corecta datele direct în aplicație, poți descărca o copie (Setări → backup și import → exportă datele) și poți șterge definitiv contul și toate datele lui (Setări → contul meu → șterge contul).",
+        "Poți vedea și corecta datele direct în aplicație, poți descărca o copie a datelor personale, în format CSV (Setări → Exportă datele) și poți șterge definitiv contul și toate datele lui (Setări → Șterge contul).",
         f"Pentru orice altă cerere scrie la {CONTACT}. Poți depune și o plângere la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP).",
     ]),
     ("Cât timp le păstrăm", ["Cât timp există contul. Ștergerea contului elimină datele de pe servere."]),
-    ("Vârsta", ["Farfuria nu este destinată copiilor sub 16 ani."]),
+    ("Vârsta", ["Plate nu este destinat copiilor sub 16 ani."]),
 ]
 
 pagina(
     "index.html",
-    "Farfuria – planul de mese al săptămânii",
-    """<h1>Ce gătim săptămâna asta?<br>Farfuria îți spune.</h1>
-<p class="lead">Farfuria îți face planul de mese pentru 7 zile (mic dejun, prânz, cină și gustări), după bugetul, caloriile și aparatele tale, apoi îți dă lista de cumpărături gata făcută.</p>
+    "Plate – planul de mese al săptămânii",
+    """<h1>Ce gătim săptămâna asta?<br>Plate îți spune.</h1>
+<p class="lead">Plate îți face planul de mese pentru 7 zile (mic dejun, prânz, cină și gustări), după bugetul, caloriile și aparatele tale, apoi îți dă lista de cumpărături gata făcută.</p>
 <div class="grid">
   <div class="card"><b>Plan pe 7 zile</b><span>Mesele pe care le alegi, în bugetul tău și în limita de calorii.</span></div>
-  <div class="card"><b>200 de rețete</b><span>Pas cu pas, cu timere, pentru air fryer, cuptor, aragaz sau slow cooker.</span></div>
+  <div class="card"><b>300 de rețete</b><span>Pas cu pas, cu timere, pentru air fryer, cuptor, aragaz sau slow cooker.</span></div>
   <div class="card"><b>Lista de cumpărături</b><span>Cantitățile adunate pe raioane, cu ce ai deja acasă scos din listă.</span></div>
   <div class="card"><b>Gătești mai rar</b><span>Alegi de câte ori gătești pe săptămână; porțiile se calculează singure.</span></div>
 </div>
-<p class="muted">Farfuria e gratuită, cu reclame. Conturile noi primesc o lună de Premium gratuit: fără reclame, regenerări nelimitate, nutriție avansată și favorite.</p>
+<p class="muted">Plate e gratuit, cu reclame. Conturile noi primesc o lună de Premium gratuit: fără reclame, regenerări nelimitate, nutriție avansată și favorite.</p>
 <p class="muted">Întrebări? Scrie-ne la <a href="mailto:""" + CONTACT + """">""" + CONTACT + """</a>.</p>""",
-    "Farfuria îți face planul de mese pe o săptămână, după buget, calorii și aparatele tale.",
+    "Plate îți face planul de mese pe o săptămână, după buget, calorii și aparatele tale.",
 )
 
 pagina(
     "confidentialitate.html",
-    "Politica de confidențialitate – Farfuria",
+    "Politica de confidențialitate – Plate",
     f'<h1>Politica de confidențialitate</h1><p class="muted">Ultima actualizare: {ACTUALIZAT}</p>\n' + sectiuni(CONFIDENTIALITATE),
-    "Ce date colectează Farfuria, de ce și cum le protejează.",
+    "Ce date colectează Plate, de ce și cum le protejează.",
 )
 
 pagina(
     "termeni.html",
-    "Termeni și condiții – Farfuria",
+    "Termeni și condiții – Plate",
     f'<h1>Termeni și condiții</h1><p class="muted">Ultima actualizare: {ACTUALIZAT}</p>\n' + sectiuni(TERMENI),
-    "Termenii de utilizare a aplicației Farfuria.",
+    "Termenii de utilizare a aplicației Plate.",
 )
 
 pagina(
     "stergere-cont.html",
-    "Ștergerea contului – Farfuria",
-    f"""<h1>Șterge-ți contul Farfuria</h1>
+    "Ștergerea contului – Plate",
+    f"""<h1>Șterge-ți contul Plate</h1>
 <p class="lead">Poți șterge definitiv contul și toate datele lui, oricând.</p>
 <h2>Din aplicație</h2>
 <ol>
-  <li>Deschide Farfuria și mergi la <b>Setări → contul meu</b>.</li>
-  <li>La final, scrie <b>STERGE</b> în câmpul de confirmare și apasă <b>șterge contul</b>.</li>
+  <li>Deschide Plate și mergi la <b>Setări → Șterge contul</b>.</li>
+  <li>Scrie <b>STERGE</b> în câmpul de confirmare și apasă <b>șterge contul</b>.</li>
 </ol>
-<p>Opțional: înainte de ștergere, din <b>Setări → backup și import → exportă datele</b> îți poți păstra o copie a planurilor și preferințelor.</p>
+<p>Opțional: înainte de ștergere, din <b>Setări → Exportă datele</b> îți poți păstra o copie a datelor tale (CSV).</p>
 <h2>Prin email</h2>
-<p>Dacă nu mai poți deschide aplicația, scrie la <a href="mailto:{CONTACT}?subject=%C8%98tergerea%20contului%20Farfuria">{CONTACT}</a> de pe adresa de email a contului și cere ștergerea. O facem în cel mult 30 de zile.</p>
+<p>Dacă nu mai poți deschide aplicația, scrie la <a href="mailto:{CONTACT}?subject=%C8%98tergerea%20contului%20Plate">{CONTACT}</a> de pe adresa de email a contului și cere ștergerea. O facem în cel mult 30 de zile.</p>
 <h2>Ce se șterge</h2>
 <p>Contul, preferințele, planurile, favoritele și lista de cumpărături sunt eliminate definitiv de pe servere. Nu păstrăm nimic. Un abonament din Google Play trebuie anulat separat, din Google Play.</p>""",
-    "Cum îți ștergi contul și datele din Farfuria.",
+    "Cum îți ștergi contul și datele din Plate.",
 )
 print("gata")
