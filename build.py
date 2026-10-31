@@ -75,11 +75,11 @@ TERMENI = [
         "Poți șterge contul oricând, din aplicație: Setări → contul meu → șterge contul.",
     ]),
     ("Ce oferă aplicația", [
-        "Farfuria îți propune prânzurile și cinele pentru o săptămână, după bugetul, caloriile, gusturile și aparatele tale, cu rețete pas cu pas și lista de cumpărături.",
+        "Farfuria îți propune mesele pentru o săptămână (mic dejun, prânz, cină și gustări, cum alegi tu), după bugetul, caloriile, gusturile și aparatele tale, cu rețete pas cu pas și lista de cumpărături.",
         "Costurile afișate sunt estimări orientative, calculate din prețuri medii de referință. Prețurile reale din magazine pot fi mai mici sau mai mari.",
     ]),
     ("Versiunea gratuită și Premium", [
-        "Farfuria este gratuită: planul pe 7 zile (cu o regenerare pe săptămână), toate rețetele, modul de gătit, lista de cumpărături și contul cu sincronizare. Farfuria Premium este un abonament opțional care adaugă regenerări și alternative nelimitate pentru mese, nutriția avansată (high protein, proteine și carbohidrați pe zi, calculatorul de necesar) și rețetele favorite.",
+        "Farfuria este gratuită: planul pe 7 zile (cu o regenerare pe săptămână), toate rețetele, modul de gătit, lista de cumpărături și contul cu sincronizare. Versiunea gratuită afișează reclame. Farfuria Premium este un abonament opțional, fără reclame, care adaugă regenerări și alternative nelimitate pentru mese, nutriția avansată (high protein, proteine și carbohidrați pe zi, calculatorul de necesar) și rețetele favorite.",
         "Fiecare cont nou primește Premium gratuit în primele 30 de zile. Nu ai nevoie de card și nu se plătește nimic; după aceea aplicația continuă ca versiune gratuită. Prețul abonamentului și eventuala perioadă de probă sunt afișate în Google Play, în moneda ta, înainte să te abonezi. Abonamentul se reînnoiește automat până îl anulezi.",
         "Plățile, reînnoirile și rambursările sunt gestionate de Google Play. Ca să eviți următoarea plată, anulează cu cel puțin 24 de ore înainte de sfârșitul perioadei: Google Play → Plăți și abonamente → Abonamente.",
     ]),
@@ -95,14 +95,19 @@ CONFIDENTIALITATE = [
         "Preferințele pe care le introduci: numărul de persoane, bugetul, câte zile gătești, categoriile preferate, restricțiile alimentare și alimentele excluse, aparatele din bucătărie și obiectivele nutriționale. Dacă folosești calculatorul de calorii, și vârsta, sexul, înălțimea, greutatea, nivelul de activitate și obiectivul.",
         "Ce creezi în aplicație: planurile săptămânale, istoricul lor, rețetele favorite și lista de cumpărături (ce ai bifat și ce ai deja acasă).",
         "Dacă te abonezi: starea abonamentului, de la Google Play. Nu vedem niciodată datele cardului.",
-        "Nu folosim localizarea, nu afișăm reclame și nu vindem datele nimănui.",
+        "Nu folosim localizarea telefonului și nu vindem datele nimănui.",
+    ]),
+    ("Reclame (doar în versiunea gratuită)", [
+        "Versiunea gratuită afișează reclame prin Google AdMob: un banner la capătul unor pagini și, cel mult o dată pe zi, o reclamă pe tot ecranul după ce termini o rețetă în modul de gătit. Cu Premium (inclusiv în luna de bun venit) nu vezi reclame.",
+        "La prima pornire după configurarea inițială îți cerem acordul printr-un formular Google. Poți alege reclame personalizate sau nepersonalizate și îți poți schimba oricând alegerea din Setări → alegeri despre reclame.",
+        "Pentru afișarea și măsurarea reclamelor, Google și partenerii săi pot folosi identificatorul de publicitate al telefonului, adresa IP (din care se poate deduce o localizare aproximativă) și informații despre dispozitiv și despre interacțiunea cu reclamele. Nu le trimitem planurile, preferințele sau alte date din contul tău. Detalii: policies.google.com/technologies/ads.",
     ]),
     ("De ce", ["Ca să funcționeze aplicația: să te logăm, să îți generăm planul, să îți salvăm datele și să le sincronizăm între telefoanele tale."]),
     ("Unde sunt păstrate", [
         "Pe telefonul tău și în contul tău, pe serverele Supabase din Uniunea Europeană (Frankfurt, Germania). Datele circulă prin conexiuni criptate, iar fiecare cont își poate citi doar propriile date.",
-        "Furnizori: Supabase (baza de date și autentificarea), Google (logarea cu Google), Brevo (trimiterea emailurilor cu codurile de verificare) și, dacă te abonezi, Google Play și RevenueCat (abonamentul).",
+        "Furnizori: Supabase (baza de date și autentificarea), Google (logarea cu Google), Brevo (trimiterea emailurilor cu codurile de verificare), Google AdMob (reclamele din versiunea gratuită) și, dacă te abonezi, Google Play și RevenueCat (abonamentul).",
     ]),
-    ("Permisiuni pe telefon", ["Internet (sincronizarea) și vibrații (timerul din modul de gătit). Aplicația nu cere acces la locație, cameră, microfon sau contacte."]),
+    ("Permisiuni pe telefon", ["Internet (sincronizarea și reclamele), vibrații (timerul din modul de gătit) și identificatorul de publicitate (reclamele din versiunea gratuită; îl poți reseta sau șterge din setările telefonului). Aplicația nu cere acces la locație, cameră, microfon sau contacte."]),
     ("Drepturile tale (GDPR)", [
         "Poți vedea și corecta datele direct în aplicație, poți descărca o copie (Setări → backup și import → exportă datele) și poți șterge definitiv contul și toate datele lui (Setări → contul meu → șterge contul).",
         f"Pentru orice altă cerere scrie la {CONTACT}. Poți depune și o plângere la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP).",
@@ -115,16 +120,16 @@ pagina(
     "index.html",
     "Farfuria – planul de mese al săptămânii",
     """<h1>Ce gătim săptămâna asta?<br>Farfuria îți spune.</h1>
-<p class="lead">Farfuria îți face planul de prânzuri și cine pentru 7 zile, după bugetul, caloriile și aparatele tale, apoi îți dă lista de cumpărături gata făcută.</p>
+<p class="lead">Farfuria îți face planul de mese pentru 7 zile (mic dejun, prânz, cină și gustări), după bugetul, caloriile și aparatele tale, apoi îți dă lista de cumpărături gata făcută.</p>
 <div class="grid">
-  <div class="card"><b>Plan pe 7 zile</b><span>Prânz și cină, în bugetul tău și în limita de calorii.</span></div>
-  <div class="card"><b>150 de rețete</b><span>Pas cu pas, cu timere, pentru air fryer, cuptor, aragaz sau slow cooker.</span></div>
+  <div class="card"><b>Plan pe 7 zile</b><span>Mesele pe care le alegi, în bugetul tău și în limita de calorii.</span></div>
+  <div class="card"><b>200 de rețete</b><span>Pas cu pas, cu timere, pentru air fryer, cuptor, aragaz sau slow cooker.</span></div>
   <div class="card"><b>Lista de cumpărături</b><span>Cantitățile adunate pe raioane, cu ce ai deja acasă scos din listă.</span></div>
   <div class="card"><b>Gătești mai rar</b><span>Alegi de câte ori gătești pe săptămână; porțiile se calculează singure.</span></div>
 </div>
-<p class="muted">Farfuria e gratuită. Conturile noi primesc o lună de Premium gratuit: regenerări nelimitate, nutriție avansată și favorite.</p>
+<p class="muted">Farfuria e gratuită, cu reclame. Conturile noi primesc o lună de Premium gratuit: fără reclame, regenerări nelimitate, nutriție avansată și favorite.</p>
 <p class="muted">Întrebări? Scrie-ne la <a href="mailto:""" + CONTACT + """">""" + CONTACT + """</a>.</p>""",
-    "Farfuria îți face planul de prânzuri și cine pe o săptămână, după buget, calorii și aparatele tale.",
+    "Farfuria îți face planul de mese pe o săptămână, după buget, calorii și aparatele tale.",
 )
 
 pagina(
